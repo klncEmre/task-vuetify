@@ -4,7 +4,7 @@
         no-gutters
     >
         <template v-for="(cardData,n) in cardDatas">
-            <v-col :key="n">
+            <v-col  :key="n">
 
                 <v-card
                     class="mx-auto"
@@ -35,14 +35,14 @@
 
                     <v-btn
                         icon
-                        @click="show = !show"
+                        @click="cardData.show = !cardData.show"
                     >
-                        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                        <v-icon>{{ cardData.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                     </v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
-                    <div v-show="show">
+                    <div v-show="cardData.show">
                         <v-divider></v-divider>
 
                         <v-card-text>
@@ -65,14 +65,14 @@
                 return {
                     show: false,
                     cardDatas: [
-                        {text: 'card1 text', title: 'Do you want to learn cook?', imageURL: 'https://cdn.vuetifyjs.com/images/cards/cooking.png'},
-                        {text: 'card2 text', title: 'Amazing bees and flowers' , imageURL: 'https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg'},
-                        {text: 'card3 text', title: 'Top western road trips' ,imageURL: 'https://cdn.vuetifyjs.com/images/cards/road.jpg'},
-                        {text: 'card4 text', title: 'You should see this houses', imageURL: 'https://cdn.vuetifyjs.com/images/cards/house.jpg'},
-                        {text: 'card5 text', title: 'Best airlines', imageURL: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg'},
-                        {text: 'card6 text', title: 'You should see this places', imageURL: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'},
-                        {text: 'card7 text', title: 'Turkish foods which you have to try', imageURL: 'https://cdn.vuetifyjs.com/images/cards/cooking.png'},
-                        {text: 'card8 text', title: 'Bees love this flowers so much', imageURL: 'https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg'}
+                        {text: 'card1 text', title: 'Do you want to learn cook?', imageURL: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', show : false},
+                        {text: 'card2 text', title: 'Amazing bees and flowers' , imageURL: 'https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg', show : false},
+                        {text: 'card3 text', title: 'Top western road trips' ,imageURL: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', show : false},
+                        {text: 'card4 text', title: 'You should see this houses', imageURL: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', show : false},
+                        {text: 'card5 text', title: 'Best airlines', imageURL: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', show : false},
+                        {text: 'card6 text', title: 'You should see this places', imageURL: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg', show : false},
+                        {text: 'card7 text', title: 'Turkish foods which you have to try', imageURL: 'https://cdn.vuetifyjs.com/images/cards/cooking.png', show : false},
+                        {text: 'card8 text', title: 'Bees love this flowers so much', imageURL: 'https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg', show : false}
                     ]
                 }
         }
