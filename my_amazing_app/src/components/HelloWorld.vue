@@ -1,8 +1,13 @@
 <template>
-  <v-form v-model="valid">
+  <v-card
+  elevation="20"
+  outlined
+  shaped
+  >
+    <v-form v-model="valid">
     <v-container>
-      <v-row>
-        <v-col
+      <v-col>
+        <v-row
           cols="12"
           md="4"
         >
@@ -11,10 +16,10 @@
             label="Username"
             required
           ></v-text-field>
-        </v-col>
+        </v-row>
 
 
-        <v-col
+        <v-row
           cols="12"
           md="4"
         >
@@ -23,19 +28,21 @@
             label="Password"
             required
           ></v-text-field>
-        </v-col>
+        </v-row>
 
-        <v-col
+        <v-row
           cols="12"
           md="4"
         >
           <v-btn  @click="submit"> Login</v-btn>
           
-        </v-col>
+        </v-row>
 
-      </v-row>
+      </v-col>
     </v-container>
   </v-form>
+  </v-card>
+  
 </template>
 <script>
 
