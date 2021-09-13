@@ -3,7 +3,11 @@
   elevation="20"
   outlined
   shaped
+  class="mx-auto"
+  max-width="374"
+  
   >
+    
     <v-form v-model="valid">
     <v-container>
       <v-col>
